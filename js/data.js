@@ -162,22 +162,21 @@ const elaveler = document.getElementById('elaveler');
 const seo = document.getElementById('seo');
 const ticaret = document.getElementById('ticaret');
 const logo = document.getElementById('logo');
-const totalpr = document.getElementById('totalpr'); // Total price element
-
-// Statik səhifeler
+const totalpr = document.getElementById('totalpr'); 
 const costDisplay = document.getElementById('costDisplay');
 const inpPages = document.getElementById('inpPages');
 const inpComplexity = document.getElementById('inpComplexity');
 
+// Statik səhifeler
 function updateCost() {
     let pageCount = inpPages.value;
-    let complexity = inpComplexity.value; // 1 = Sadə, 2 = Orta, 3 = Xüsusi
+    let complexity = inpComplexity.value; 
     let baseCost = pageCount * 100;
     let finalCost = baseCost * complexity; 
 
     costDisplay.textContent = `${pageCount} səhifə / ₼ ${finalCost}`;
     statik.textContent = `₼ ${finalCost}`;
-    updateTotal(); // Update total when statik price changes
+    updateTotal(); 
 }
 
 inpPages.addEventListener('input', updateCost);
@@ -202,14 +201,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         webCost.textContent = `₼ ${totalCost}`;
         elaveler.textContent = `₼ ${totalCost}`;
-        updateTotal(); // Update total when web cost changes
+        updateTotal(); 
     }
 
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener("change", updateWebCost);
     });
 
-    updateWebCost(); // Səhifə yüklənərkən xərci yenilə
+    updateWebCost(); 
 });
 
 // SEO qiyməti
@@ -231,14 +230,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         searchCost.textContent = `₼ ${totalCost}`;
         seo.textContent = `₼ ${totalCost}`;
-        updateTotal(); // Update total when seo cost changes
+        updateTotal(); 
     }
 
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener("change", updateSearchCost);
     });
 
-    updateSearchCost(); // Səhifə yüklənərkən xərci yenilə
+    updateSearchCost();
 });
 
 // E-ticarət qiyməti
@@ -260,14 +259,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         ticaretCost.textContent = `₼ ${totalCost}`;
         ticaret.textContent = `₼ ${totalCost}`;
-        updateTotal(); // Update total when ticaret cost changes
+        updateTotal(); 
     }
 
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener("change", updateTicaretCost);
     });
 
-    updateTicaretCost(); // İlk dəfə səhifə yüklənərkən hesablasın
+    updateTicaretCost(); 
 });
 
 // Logo dizayn qiyməti
@@ -287,28 +286,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
         logoCost.textContent = `₼ ${cost}`;
         logo.textContent = `₼ ${cost}`;
-        updateTotal(); // Update total when logo cost changes
+        updateTotal(); 
     }
 
     rangeInput.addEventListener("input", updateLogoCost);
 
-    updateLogoCost(); // İlk dəfə səhifə yüklənərkən hesablasın
+    updateLogoCost(); 
 });
 
-// Total price calculation function
 function updateTotal() {
-    // Get all individual section costs
     const statikCost = parseFloat(statik.textContent.replace('₼ ', '') || 0);
     const elavelerCost = parseFloat(elaveler.textContent.replace('₼ ', '') || 0);
     const seoCost = parseFloat(seo.textContent.replace('₼ ', '') || 0);
     const ticaretCost = parseFloat(ticaret.textContent.replace('₼ ', '') || 0);
     const logoCost = parseFloat(logo.textContent.replace('₼ ', '') || 0);
 
-    // Calculate the total
     const totalCost = statikCost + elavelerCost + seoCost + ticaretCost + logoCost;
 
-    // Update the total price display
     totalpr.textContent = `₼ ${totalCost}`;
 }
 
-updateTotal(); // Initial calculation when the page loads
+updateTotal();
