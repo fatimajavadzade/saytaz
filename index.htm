@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sayt.az</title>
     <link rel="stylesheet" href="src/output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
@@ -32,7 +34,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="flex items-center gap-[3px] hover:text-[#A271F2]">Xidmətlər
+                    <a href="calculator.htm" class="flex items-center gap-[3px] hover:text-[#A271F2]">Xidmətlər
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-5 h-5 group-hover:text-mainLightPurpleHover"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path></svg>
                     </a>
                 </li>
@@ -111,27 +113,603 @@
             </button>
         </div>
     </header>
-    <main>
+    <main class="min-h-screen relative">
         <section class="text-center">
-            <div class="pt-[100px] max-h-[100vh] text-[24px] leading-[55px] relative flex flex-col justify-center items-center mx-auto lg:px-[20vw] lg:py-[100px] text-center text-slate-700">
-                <h1 class="sm:mb-4 sm:px-4 mb-8 px-5 md:text-xlg lg:text-xxlg font-medium">Biznesinizi bizimlə rəqəmsal dünyada 
+            <div class="max-md:pt-[100px] md:pt-[50px] lg:pt-5 max-h-[100vh] text-[24px] leading-[55px] relative flex flex-col justify-center items-center mx-auto lg:px-[20vw] lg:leading-[80px] text-slate-700">
+                <h1 class="sm:mb-4 sm:px-4 mb-8 px-5 md:text-[32px] md:mt-0 lg:text-[48px] font-medium">Biznesinizi bizimlə rəqəmsal dünyada 
                     <span class="mx-4 md:mx-6 text-blue-600 relative lg:mx-[30px] text-5 whitespace-nowrap">daha asan
                         <i class="absolute top-[-20px] left-[-15px] md:left-[-18px] md:top-[-25px] lg:top-[-25px]">
                             <img alt="Home-image" width="278" height="120" class="max-w-[110%] max-h-[110%]" src="images/easier.svg">
                         </i>
                     </span> yoldan irəliyə apar!
                 </h1>
+                <p class="px-4 text-base mb-8 font-normal text-slate-500 lg:text-[20px] lg:mb-8 lg:px-[140px] sm:mb-12">Mütəxəssislərdən ibarət komandamız sizə müştəri dəstəyi və texniki yardım göstərmək üçün 24/7 hazırdır.</p>
+                <button class="cursor-pointer border-[3px] border-[#A271F2] px-8 py-5 rounded-lg text-blue-600 text-[16px] leading-[10px] font-medium md:mb-[153px]">Sayt Sifariş Et</button>
+                <!-- <div></div> -->
             </div>
-            <p class="px-4 text-base mb-8 font-normal text-slate-500 lg:text-[20px] lg:px-[140px] sm:mb-12">Mütəxəssislərdən ibarət komandamız sizə müştəri dəstəyi və texniki yardım göstərmək üçün 24/7 hazırdır.</p>
-            <button class="cursor-pointer border-[3px] border-[#A271F2] px-8 py-5 rounded-lg text-blue-600 text-[16px] leading-[10px] font-medium md:mb-[153px]">Sayt Sifariş Et</button>
-            <!-- Ball part -->
         </section>
-        
-        
+        <section id="bloglar" class="mt-10 max-w-[1300px] mx-auto py-2 px-4 flex flex-col min-[968px]:flex-row justify-between gap-8">
+            <div>
+                <div class="w-full flex flex-row min-[968px]:flex-row mb-8 justify-between gap-8 sm:flex sm:justify-center hidden sm:block">
+                    <div class="rounded-lg flex flex-col px-6 py-8 items-center justify-between bg-white shadow-[0_0_10px_0] shadow-[#00000033] w-[200px]">
+                        <span class="text-[#6B7280] mb-8 text-center font-[400] text-sm">Tamamlandı</span>
+                        <span class="border-[5px] rounded-full font-[600] text-lg w-[75px] flex items-center justify-center h-[75px] border-[#22BFA5]">100%</span>
+                        <span class="font-bold text-xl text-gray-800 mt-6">Sabina G.</span>
+                        <span class="mt-4 text-sm tracking-tight text-gray-400 font-[500]">Designer</span>
+                    </div>
+
+                    <div class="rounded-lg flex flex-col px-6 py-8 items-center justify-between bg-white shadow-[0_0_10px_0] shadow-[#00000033] w-[200px]">
+                        <span class="text-[#6B7280] mb-8 text-center font-[400] text-sm">Icradadır</span>
+                        <span class="border-[5px] rounded-full font-[600] w-[75px] flex items-center justify-center h-[75px] border-[#fc5185]">90%</span>
+                        <span class="font-bold text-xl text-gray-800 mt-6">Fuad M.</span>
+                        <span class="mt-4 text-sm tracking-tight text-gray-400 font-[500]">Frontend Developer</span>
+                    </div>
+
+                    <div class="rounded-lg flex flex-col px-6 py-8 items-center justify-between bg-white shadow-[0_0_10px_0] shadow-[#00000033] w-[200px]">
+                        <span class="text-[#6B7280] mb-8 text-center font-[400] text-sm">Icradadır</span>
+                        <span class="border-[5px] rounded-full font-[600] w-[75px] flex items-center justify-center h-[75px] border-[#fc5185]">65%</span>
+                        <span class="font-bold text-xl text-gray-800 mt-6">Ahmad R.</span>
+                        <span class="mt-4 text-sm tracking-tight text-gray-400 font-[500]">Backend Developer</span>
+                    </div>
+                </div>
+
+                <div class="max-w-[760px] flex items-center justify-center mx-auto mb-10 sm:flex sm:justify-center hidden sm:block">
+                    <div class="flex items-center">
+                        <i class="fa-solid text-[33px] text-[#A271F2] fa-circle-check cursor-pointer hover:text-[#7D3BE2]"></i>
+                        <hr class="w-[190px] bg-[#A271F2] border-0 h-[2px]">
+                    </div>
+
+                    <div class="flex items-center">
+                        <i class="fa-regular fa-circle-dot text-[33px] text-[#A271F2] cursor-pointer hover:text-[#7D3BE2]"></i>
+                        <hr class="w-[190px] bg-[#e5e7eb] border-0 h-[2px]">
+                    </div>
+
+                    <div class="flex items-center">
+                        <i class="fa-regular fa-circle text-[33px] text-[#e5e7eb] cursor-pointer hover:text-[#ccc]"></i>
+                    </div>
+                </div>
+
+                <div class="flex mb-11 !max-w-[660px] items-center sm:flex !mx-auto sm:justify-center hidden sm:block text-[#00000099] text-center !justify-center">
+                    <span class="font-[500] w-[33.3%]">Web Design</span>
+                    <span class="font-[500] w-[33.3%]">Back-end</span>
+                    <span class="font-[500] w-[33.3%]">Front-end</span>
+                </div>
+            </div>
+
+            <div class="flex w-[100%] justify-center text-center mx-auto">
+                <div class="px-4 py-6 max-w-full sm:max-w-[600px] w-full">
+                    <div class="flex justify-center">
+                        <h2 class="font-[600] text-[26px] leading-[32px] max-w-72 min-[968px]:text-center">Vebsayt
+                            sifarişinizi izləyin</h2>
+                    </div>
+                    <form class="mt-11 w-[100%]">
+                        <input class="w-full mb-4 placeholder-[#676767] max-w-96  placeholder:font-[500] py-[12px] text-center border-[1px] border-[#676767] rounded-lg focus:outline-none" type="text" placeholder="Sifariş kodu">
+                        <button class="w-full py-[12px] rounded-md max-w-96 bg-[#a271f2] shadow-[0_3px_10px_0] shadow-[#A271F2] text-white text-[18px] hover:bg-[#864ae8] cursor-pointer">İzlə</button>
+                    </form>
+
+                    <div class="mt-[55px]">
+                        <span class="text-xs text-[#000000992] font-[300]">Sayt.az ilə sifarişlərinizə hər zaman nəzarət
+                            edin</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class=" items-center bg-[#FAF4FF]  relative w-full flex flex-col py-24">
+            <div>
+                <div class="md:px-[100px] lg:px-[250px] text-center px-2 flex flex-col gap-2 justify-center items-center">
+                    <h2 class="text-[22px] font-medium leading-[44px]">Domen Adını Axtarın</h2>
+                    <p class="p-2 text-base">.az domain sifariş etməmişdən öncə 
+                        <span class="font-bold"> whois.az </span>
+                        saytında yoxlayın
+                    </p>
+                    <p class="p-2"> 
+                        Sayt.az-da .az domenləri yalnız aktiv hosting planı olan müştərilər üçün əlçatandır. Davam etməzdən əvvəl bizdən hosting aldığınıza əmin olun.
+                        <span class="cursor-pointer ml-1 font-bold"> Ətraflı oxu...</span>
+                    </p>
+                </div>
+                <div class=" flex flex-col justify-center items-center mt-12  sm:mx-4">
+                    <form class="sm:w-[400px] flex mx-auto items-center rounded-md mt-6 justify-center bg-white text-center">
+                        <input placeholder="İstədiyiniz domen adını daxil edin" type="text" class="p-3 w-full outline-none">
+                        <select class="py-[14px] bg-white text-[#999] outline-none">
+                            <option>.az</option>
+                            <option>.com</option>
+                            <option>.net</option>
+                            <option>.info</option>
+                            <option>.biz</option>
+                            <option>.org</option>
+                            <option>.us</option>
+                            <option>.in</option>
+                            <option>.ws</option>
+                            <option>.mobi</option>
+                            <option>.tv</option>
+                            <option>.me</option>
+                            <option>.ru</option>
+                            <option>.de</option>
+                            <option>.com.az</option>
+                            <option>.co</option>
+                            <option>.site.az</option>
+                            <option>.sayt.az</option>
+                            <option>.ureb.com</option>
+                            <option>.org.az</option>
+                            <option>.info.az</option>
+                            <option>.biz.az</option>
+                            <option>.net.az</option>
+                        </select>
+                        <button class="bg-[#A271F2] px-8 py-[13.5px] rounded-[4px] text-white font-normal hover:bg-[#864ae8]">Axtar</button>
+                    </form>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center mt-[50px] text-[#A271F2] font-medium text-center gap-10">
+                    <div class="flex items-center justify-center gap-10">
+                        <div class="p-4">
+                            <h2 class="text-[24px]">.az</h2>
+                            <span>₼40/il</span>
+                        </div>
+                        <div class="p-4">
+                            <h2 class="text-[24px]">.com</h2>
+                            <span>₼25/il</span>
+                        </div>
+                        <div class="p-4">
+                            <h2 class="text-[24px]">.net</h2>
+                            <span>₼38/il</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center gap-10">
+                        <div class="p-4">
+                            <h2 class="text-[24px]">.info</h2>
+                            <span>₼55/il</span>
+                        </div>
+                        <div class="p-4">
+                            <h2 class="text-[24px]">.biz</h2>
+                            <span>₼30/il</span>
+                        </div>
+                        <div class="p-4">
+                            <h2 class="text-[24px]">.org</h2>
+                            <span>₼35/il</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="py-16">
+                <div class="px-12 md:flex">
+                    <div>
+                        <h2 class="text-[30px] md:text-[42px] font-bold pb-8 text-[#300B60]">
+                            Hostinq Planınızı Seçin
+                        </h2>
+                        <p class="text-[20px] font-medium text-[#4A2182]">
+                            Yaxşı Bir Başlanğıc Təhlükəsiz və Güclü Hostinq Tələb Edir
+                        </p>
+                    </div>
+                    <div class="mx-[5px] text-center pt-10">
+                        <div class="w-fit justify-between mt-4 inline-flex border border-[#94A3B8] rounded-3xl overflow-hidden">
+                            <span class="w-30 text-[16px] py-3 px-8 bg-[#a271f2] rounded-r-3xl text-[#fff] font-medium cursor-pointer">Aylıq</span>
+                            <span class="w-30 text-[16px] py-3 px-8 text-[#94A3B8] rounded-l-3xl cursor-pointer">İllik</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 flex-col lg:flex-row gap-4 p-4">
+                <div class="shadow-md rounded-lg p-6 md:p-4 cursor-pointer border-2 border-transparent hover:border-2 hover:border-[#a271f2] bg-[#FAFBFF]">
+                    <div>
+                        <h2 class="text-[36px] text-[#300B60] font-medium">₼5
+                            <span class="text-[14px] text-[#300B60] font-medium">/ay</span>
+                        </h2>
+                    </div>
+                    <div class="bg-white px-2 py-3 rounded-xl">
+                        <h3 class="text-[24px] text-[#300B60] font-bold">Ekonomik</h3>
+                        <ul class="mt-8 mx-1 text-[14px] flex flex-col gap-[14px]">
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]"><b>1</b> Domen</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]"><b>3 GB</b> Disk Həcmi</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]"><b>3</b> E-mail Hesabı </a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">Premium müştəri dəstəyi </a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">SSL Təhlükəsizliyi</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">Yedəkləmə və bərpa</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]"><b>Limitsiz</b> Trafik</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">Təhlükəsizlik Xüsusiyyətləri</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">cPanel</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">FTP Girişi</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">Fayl İdarəedici</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="w-full text-[14px] text-[#a271f2] hover:text-[#fff] hover:bg-[#a271f2] py-2 px-3 font-semibold border border-[#a271f2] rounded-3xl mt-6">
+                        Sifariş et
+                    </button>
+                </div>
+                <div class="relative shadow-[#a271f2] shadow-xl rounded-lg p-6 md:p-4 cursor-pointer border-2 border-[#a271f2] bg-[#FAFBFF]">
+                    <div>
+                        <h2 class="text-[36px] text-[#300B60] font-medium">₼10
+                            <span class="text-[14px] text-[#300B60] font-medium">/ay</span>
+                        </h2>
+                    </div>
+                    <div class="absolute right-4 top-4 text-xs px-3 py-2 bg-white rounded-2xl font-bold text-[#a271f2]">
+                        <span> ƏN POPULYAR </span>
+                    </div>
+                    <div class="bg-white px-2 py-3 rounded-xl">
+                        <h3 class="text-[24px] text-[#300B60] font-bold">Standart</h3>
+                        <ul class="mt-8 mx-1 text-[14px] flex flex-col gap-[14px]">
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]"><b>2</b> Domen</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]"><b>8 GB</b> Disk Həcmi</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]"><b>5</b> E-mail Hesabı </a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">Premium müştəri dəstəyi </a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">SSL Təhlükəsizliyi</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">Yedəkləmə və bərpa</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]"><b>Limitsiz</b> Trafik</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">Təhlükəsizlik Xüsusiyyətləri</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">cPanel</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">FTP Girişi</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">Fayl İdarəedici</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="w-full text-[14px] hover:text-[#a271f2] hover:bg-[#fff] text-[#fff] bg-[#a271f2] py-2 px-3 font-semibold border border-[#a271f2] rounded-3xl mt-6">
+                        Sifariş et
+                    </button>
+                </div>
+                <div class="shadow-md rounded-lg p-6 md:p-4 cursor-pointer border-2 border-transparent hover:border-2 hover:border-[#a271f2] bg-[#FAFBFF]">
+                    <div>
+                        <h2 class="text-[36px] text-[#300B60] font-medium">₼20
+                            <span class="text-[14px] text-[#300B60] font-medium">/ay</span>
+                        </h2>
+                    </div>
+                    <div class="bg-white px-2 py-3 rounded-xl">
+                        <h3 class="text-[24px] text-[#300B60] font-bold">Professional</h3>
+                        <ul class="mt-8 mx-1 text-[14px] flex flex-col gap-[14px]">
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]"><b>5</b> Domen</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]"><b>14 GB</b> Disk Həcmi</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]"><b>Limitsiz</b> E-mail Hesabı </a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">Premium müştəri dəstəyi </a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">SSL Təhlükəsizliyi</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">Yedəkləmə və bərpa</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]"><b>Limitsiz</b> Trafik</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">Təhlükəsizlik Xüsusiyyətləri</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">cPanel</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">FTP Girişi</a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid text-[#00b090] fa-check"></i>
+                                <a href="#" class="mx-[10px]">Fayl İdarəedici</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="w-full text-[14px] text-[#a271f2] hover:text-[#fff] hover:bg-[#a271f2] py-2 px-3 font-semibold border border-[#a271f2] rounded-3xl mt-6">
+                        Sifariş et
+                    </button>
+                </div>
+        </section>
+        <section>
+            <div class="py-16 px-8">
+                <div class="px-12 flex flex-col lg:flex-row justify-between gap-8">
+                    <div>
+                        <h2 class="text-[22px] md:text-[30px] lg:text-[42px] font-bold  text-[#300B60]">
+                            Startuplar
+                        </h2>
+                        <p class="text-[16px] md:text-[20px] text-[#4A2182]">
+                            Mütəxəssis məsləhətlərimizlə biznesinizi necə inkişaf etdirəcəyinizi öyrənin.
+                        </p>
+                    </div>
+                    <div>
+                        <button class="text-[16px] text-[#fff] bg-[#a271f2] font-medium rounded-[8px] py-[10px] px-6">
+                            Bütün StartUplar <i class="fa-solid text-xs px-1 fa-angles-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-16 gap-8 justify-center auto-rows-fr lg:px-[100px]">
+                    <article class="bg-[#FAF4FF] w-full rounded-2xl transition-all duration-300 border border-gray-100 p-6">
+                        <div class="bg-white overflow-hidden rounded-xl">
+                            <img src="images/football.jpg" class="h-full max-w-[220px] w-full mx-auto transform hover:scale-110 transition-all duration-500" alt="Football Image">
+                        </div>
+                        <div>
+                            <h3 class="cursor-pointer font-medium text-[#300B60] mt-8 text-[24px]">football.biz</h3>
+                            <p class="text-[16px] mt-3 text-[#5A27A2] leading-7">Futbol nəticələrinin canlı təqdim edilməsi</p>
+                            <button class="bg-[#A271F2] py-2 px-4 mt-4 text-white rounded-full font-semibold hover:bg-[#5A27A2] transition-all">Ətraflı oxu...</button>
+                        </div>
+                    </article>
+                
+                    <article class="bg-[#FAF4FF] w-full rounded-2xl transition-all duration-300 border border-gray-100 p-6">
+                        <div class="bg-white overflow-hidden rounded-xl">
+                            <img src="images/paraicon.png" class="h-full max-w-[220px] w-full mx-auto transform hover:scale-110 transition-all duration-500" alt="ParaCoin Image">
+                        </div>
+                        <div>
+                            <h3 class="cursor-pointer font-medium text-[#300B60] mt-8 text-[24px]">paracoin.network</h3>
+                            <p class="text-[16px] mt-3 text-[#5A27A2] leading-7">
+                                Para göndər & qəbul et, NFT Al & Sat, Ağıllı müqavilələr hazırla, Birja, Ödənişlər
+                            </p>
+                            <button class="bg-[#A271F2] py-2 px-4 mt-4 text-white rounded-full font-semibold hover:bg-[#5A27A2] transition-all">Ətraflı oxu...</button>
+                        </div>
+                    </article>
+
+                    <article class="bg-[#FAF4FF] w-full rounded-2xl transition-all duration-300 border border-gray-100 p-6">
+                        <div class="bg-white overflow-hidden rounded-xl">
+                            <img src="images/kredit.png" class="h-full max-w-[220px] w-full mx-auto transform hover:scale-110 transition-all duration-500" alt="ParaCoin Image">
+                        </div>
+                        <div>
+                            <h3 class="cursor-pointer font-medium text-[#300B60] mt-8 text-[24px]">kredit.az</h3>
+                            <p class="text-[16px] mt-3 text-[#5A27A2] leading-7">
+                                kredit.az saytı ümumi bankların kredit faizləri haqqında məlumatları bir araya toplayacaq
+                            </p>
+                            <button class="bg-[#A271F2] py-2 px-4 mt-4 text-white rounded-full font-semibold hover:bg-[#5A27A2] transition-all">Ətraflı oxu...</button>
+                        </div>
+                    </article>
+                </div>
+                
+            </div>
+        </section>
+        <section id="blog" class="max-w-[1296px] m-auto mb-20">
+            <h2 class="text-[#300b60] text-[22px] md:text-[32px] px-1 mt-5 text-center font-bold">
+                Bloqumuza daxil olun
+            </h2>
+            <p class="text-base mt-2 mb-5 text-[#4a2182] md:text-xl text-center font-medium px-1">Vebin İnkişafı,
+                Dizaynı və Onlayn Strategiyaları ilə bağlı maraqlı məqalələri kəşf edin
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-2 md:p-4">
+                <a href="#" class="py-2 px-2 border-[2px] md:max-w-[414px] w-full border-[#a271f2] rounded-[7px] bg-[#faf4ff] transition duration-300 hover:shadow-md hover:shadow-gray-400 hover:border-[#6829c7]">
+                    <div>
+                        <img class="max-w-full mx-auto w-full  max-h-full h-[256px] border rounded-[7px]" src="images/trends.jpg" alt="img">
+                    </div>
+                    <p class="text-xl font-medium mt-[30px] mb-[24px] text-[#334155] h-[56px]">Uğurlu biznes üçün hansı
+                        veb trendləri izləməlisən?</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-white border rounded-[8px] bg-[#a271f2] px-4 py-1">Feb 27, 2025</span>
+                        <span class="text-white border rounded-[8px] bg-[#a271f2] px-4 py-1">web design</span>
+                        <span class="text-white border rounded-[8px] bg-[#a271f2] px-4 py-1">marketinq</span>
+                        <span class="text-white border rounded-[8px] bg-[#a271f2] px-4 py-1">sayt</span>
+                    </div>
+                </a>
+                <a href="#" class="py-2 px-2 border-[2px] md:max-w-[414px] w-full border-[#a271f2] rounded-[7px] bg-[#faf4ff] transition duration-300 hover:shadow-md hover:shadow-gray-400 hover:border-[#6829c7]">
+                    <div>
+                        <img class="max-w-full mx-auto w-full max-h-full h-[256px] border rounded-[7px]" src="images/deepseek.jpg" alt="img">
+                    </div>
+                    <p class="text-xl font-medium mt-[30px] mb-[24px] text-[#334155] h-[56px]">DeepSeek AI: Yeni Nəsil
+                        Süni İntellekt Aləti</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-white border rounded-[8px] bg-[#a271f2] px-4 py-1">Feb 6, 2025</span>
+                        <span class="text-white border rounded-[8px] bg-[#a271f2] px-4 py-1">sayt yaratmaq</span>
+                        <span class="text-white border rounded-[8px] bg-[#a271f2] px-4 py-1">sayt sifarişi</span>
+                        <span class="text-white border rounded-[8px] bg-[#a271f2] px-4 py-1">saytların
+                            hazırlanması</span>
+                    </div>
+                </a>
+                <a href="#" class="py-2 px-2 border-[2px] md:max-w-[414px] w-full border-[#a271f2] rounded-[7px] bg-[#faf4ff] transition duration-300 hover:shadow-md hover:shadow-gray-400 hover:border-[#6829c7]">
+                    <div>
+                        <img class="max-w-full mx-auto w-full  max-h-full h-[256px] border rounded-[7px]" src="images/social.jpg" alt="img">
+                    </div>
+                    <p class="text-xl font-medium mt-[30px] mb-[24px] text-[#334155] h-[56px]">2025-ci ildə Onlayn
+                        Biznesin Trendləri</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-white border rounded-[8px] bg-[#a271f2] px-4 py-1">Jan 29, 2025</span>
+                        <span class="text-white border rounded-[8px] bg-[#a271f2] px-4 py-1">marketinq</span>
+                        <span class="text-white border rounded-[8px] bg-[#a271f2] px-4 py-1">social</span>
+                        <span class="text-white border rounded-[8px] bg-[#a271f2] px-4 py-1">peşəkar veb dizayn</span>
+                    </div>
+                </a>
+            </div>
+            <button class="pt-[9px] pb-[9px] max-lmd:w-[200px] mb-10 w-[29%] text-white bg-[#a271f2] mt-8 hover:bg-[#7d3be2] m-auto flex justify-center active:bg-[#6829c7] rounded-[8px] font-semibold">Bütün
+                Bloqlar</button>
+        </section>
+        <!-- <section class="max-w-7xl m-auto bg-white px-8 ">
+            <div class="max-w-2xl m-auto my-5">
+                <h2 class="text-[#300b60] text-[22px] md:text-[32px] px-1 mt-5 text-center font-bold">
+                    Videolarımızı Kəşf Edin
+                </h2>
+                <p class="text-base mt-2 text-[#4a2182] text-center font-medium px-1">
+                    Kəşf Edin, Öyrənin və Uğur Qazanın
+                </p>
+                <p class="text-base mt-2 text-[#4a2182] text-center font-medium px-1">
+                    Son nailiyyətlərimizi, media çıxışlarımızı və ətraflı təlimlərimizi izləmək üçün video kolleksiyamıza
+                    göz atın. İdeal veb saytınızı qurmaqda sizə necə kömək edə biləcəyimizi öyrənin və uğur hekayəmizdən
+                    ilham alın.
+                </p>
+            </div>
+            <div class="swiper slider2 swiper-initialized swiper-horizontal swiper-backface-hidden">
+                <div class="swiper-wrapper" id="swiper-wrapper-ed5f29107d35bed410" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(-1174px, 0px, 0px); transition-delay: 0ms;">
+                    <div class="swiper-slide swiper-slide-next swiper-slide-prev" role="group" aria-label="1 / 2" data-swiper-slide-index="0" style="width: 1174px;">
+                        <div class="flex justify-center">
+                            <iframe class="max-sb:w-[200px] max-sb:h-[200px]" width="560" height="315" src="https://www.youtube.com/embed/lnpAcQS6Xz4?modestbranding=1&autohide=1&rel=0&autoplay=0&showinfo=0&controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active" role="group" aria-label="2 / 2" data-swiper-slide-index="1" style="width: 1174px;">
+                        <div class="flex justify-center">
+                            <iframe class="max-sb:w-[200px] max-sb:h-[200px]" width="560" height="315" src="https://www.youtube.com/embed/lnpAcQS6Xz4?si=-Ur3YJ_7xt3F466c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-ed5f29107d35bed410"></div>
+                <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-ed5f29107d35bed410"></div>
+                <br><br>
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 2" aria-current="true"></span></div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+        </section> -->
+
     </main>
+    <footer class="pt-16 px-2 bg-[#FAF4FF] border-t-[1px] border-gray-200">
+        <div class="flex flex-col md:flex-row items-start justify-between max-w-[1296px] mx-auto gap-10">
+            <div class="py-6 px-4">
+                <img class="w-[200px]" src="images/saytaz.svg" alt="imgs">
+                <p class="max-w-[500px] text-[#4A2182] mt-6 mb-10">Sayt.az - Web saytların hazırlanması, Domain, Hosting
+                    satışı, SEO, SMM və texniki xidmətlər təklif edir.</p>
+                <h3 class="mb-6 font-bold">Bizi izləyin :</h3>
+                <div class="flex items-center justify-start gap-4">
+                    <div><i class="fa-brands text-[#A271F2] text-[37px] hover:text-[#4A2182] transition-all fa-facebook"></i>
+                    </div>
+                    <div><i class="fa-brands text-[#A271F2] text-[37px] hover:text-[#4A2182] transition-all fa-instagram"></i>
+                    </div>
+                    <div><i class="fa-brands text-[#A271F2] text-[37px] hover:text-[#4A2182] transition-all fa-whatsapp"></i>
+                    </div>
+                    <div><i class="fa-brands text-[#A271F2] text-[37px] hover:text-[#4A2182] transition-all fa-linkedin-in"></i>
+                    </div>
+                    <div><i class="fa-brands text-[#A271F2] text-[37px] hover:text-[#4A2182] transition-all fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex sm:flex-row flex-col gap-10 items-start px-4 md:pr-[150px] md:pt-[50px]">
+                <div>
+                    <h3 class="text-[#300B60CE] mb-3 font-bold text-[23px] uppercase">Hostinq &amp; Domen</h3>
+                    <div class="mb-3 text-[#4A2182] font-medium text-lg hover:text-[#A271F2]">Domen</div>
+                    <div class="mb-3 text-[#4A2182] font-medium text-lg hover:text-[#A271F2]">Veb Hostinq</div>
+                    <div class="mb-3 text-[#4A2182] font-medium text-lg hover:text-[#A271F2]">VPS Hostinq</div>
+                    <div class="mb-3 text-[#4A2182] font-medium text-lg hover:text-[#A271F2]">Server</div>
+                </div>
+                <div>
+                    <h3 class="text-[#300B60CE] mb-3 font-bold text-[23px] uppercase">Şirkət</h3>
+                    <div class="mb-3 text-[#4A2182] font-medium text-lg hover:text-[#A271F2]">Haqqımızda</div>
+                    <div class="mb-3 text-[#4A2182] font-medium text-lg hover:text-[#A271F2]">Əlaqə</div>
+                    <div class="mb-3 text-[#4A2182] font-medium text-lg hover:text-[#A271F2]">Bloq</div>
+                    <div class="mb-3 text-[#4A2182] font-medium text-lg hover:text-[#A271F2]">Portfolio</div>
+                </div>
+            </div>
+        </div>
+        <div class="md:border-t md:border-t-gray-200 flex items-center justify-between py-2"> 
+            <div class="flex flex-col sm:flex-row gap-3 border-y border-y-gray-200 md:border-none py-4 px-4 text-[#4A2182]">
+                <div class="items-center flex gap-2">
+                 <i class="fa-solid cursor-pointer fa-phone"></i>
+                 <p class="cursor-pointer">+(99470) 330-00-04</p>
+                </div>
+               <div class="items-center flex gap-2">
+                 <i class="fa-solid cursor-pointer fa-envelope"></i>
+                 <p class="cursor-pointer">support@sayt.az</p>
+               </div>
+             </div>
     
+            <div class="flex items-centertext-[#4a2182] mt-2 text-[#4A2182] px-4">
+                <div>
+                    © Copyright 2004-2025 © Sayt.az .  Bütün Hüquqlar Qorunur.
+                </div>
+            </div>
+        </div>
+        
+    </footer>
     
-    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

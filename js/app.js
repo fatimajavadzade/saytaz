@@ -12,6 +12,3 @@ document.getElementById("closeSidebar").addEventListener("click", function() {
 
 
 
-
-
-
